@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/actors/Knight.gd" id="1_knight"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knight"]
+size = Vector2(36, 58)
+
+[node name="Knight" type="CharacterBody2D" groups=["player"]]
+position = Vector2(180, 520)
+script = ExtResource("1_knight")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -29)
+shape = SubResource("RectangleShape2D_knight")
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="CapeGlow" type="Polygon2D" parent="Visual"]
+color = Color(0.0823529, 0.85098, 1, 0.35)
+polygon = PackedVector2Array(-28, -38, -12, -42, -8, 4, -30, 8)
+
+[node name="ArmorBody" type="Polygon2D" parent="Visual"]
+color = Color(0.156863, 0.321569, 0.65098, 1)
+polygon = PackedVector2Array(-18, -48, 18, -48, 22, -4, 14, 10, -14, 10, -22, -4)
+
+[node name="Helmet" type="Polygon2D" parent="Visual"]
+color = Color(0.62, 0.78, 0.96, 1)
+polygon = PackedVector2Array(-16, -64, 16, -64, 20, -50, 12, -42, -12, -42, -20, -50)
+
+[node name="HelmetShine" type="Polygon2D" parent="Visual"]
+color = Color(1, 0.86, 0.28, 1)
+polygon = PackedVector2Array(-4, -68, 4, -68, 6, -42, -6, -42)
+
+[node name="Shield" type="Polygon2D" parent="Visual"]
+position = Vector2(-24, -26)
+color = Color(0.05, 0.95, 1, 1)
+polygon = PackedVector2Array(-14, -16, 10, -20, 16, -2, 8, 20, -10, 16, -18, -2)
+
+[node name="ShieldEmblem" type="Polygon2D" parent="Visual"]
+position = Vector2(-24, -26)
+color = Color(1, 0.74, 0.18, 1)
+polygon = PackedVector2Array(-2, -9, 6, 0, -2, 10, -10, 0)
+
+[node name="Sword" type="Polygon2D" parent="Visual"]
+position = Vector2(28, -30)
+color = Color(0.9, 0.96, 1, 1)
+polygon = PackedVector2Array(0, -38, 7, -4, 3, 18, -3, 18, -7, -4)
+
+[node name="SwordHilt" type="Polygon2D" parent="Visual"]
+position = Vector2(28, -30)
+color = Color(1, 0.74, 0.18, 1)
+polygon = PackedVector2Array(-12, 16, 12, 16, 12, 22, -12, 22)
