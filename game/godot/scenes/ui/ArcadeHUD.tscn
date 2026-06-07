@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/ArcadeHUD.gd" id="1_hud"]
+
+[node name="ArcadeHUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="ObjectiveLabel" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 760.0
+offset_bottom = 62.0
+text = "Objective: Reach the outpost gate."
