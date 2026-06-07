@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wyrmbound Vale — Play</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="arcade-shell">
+    <section id="titleScreen" class="title-screen" aria-label="Wyrmbound Vale title screen">
+      <div class="title-card">
+        <p class="eyebrow">Bright Vale Public Demo</p>
+        <h1>WYRMBOUND VALE</h1>
+        <h2>Arcade Quest of the Free Dragons</h2>
+        <p class="pitch">A browser-playable bridge slice: control the Knight, defeat the Gargomel Scout, and reach the gate.</p>
+        <button id="startButton" class="primary-button" type="button">Start Game</button>
+        <div class="controls-card">
+          <strong>Controls</strong>
+          <span>A/D or ←/→: Move</span>
+          <span>Space/W/↑: Jump</span>
+          <span>J/K: Sword Attack</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="play-panel" aria-label="Wyrmbound Vale playable demo">
+      <div class="hud" aria-live="polite">
+        <div><span>Knight HP</span><strong id="hpValue">100</strong></div>
+        <div><span>Score</span><strong id="scoreValue">0</strong></div>
+        <div><span>Objective</span><strong id="objectiveValue">Press Start Game</strong></div>
+        <div><span>State</span><strong id="stateValue">Title</strong></div>
+      </div>
+      <canvas id="gameCanvas" width="1280" height="720" aria-label="Wyrmbound Vale game canvas"></canvas>
+      <div class="mobile-controls" aria-label="Mobile controls">
+        <button type="button" data-action="left">Left</button>
+        <button type="button" data-action="right">Right</button>
+        <button type="button" data-action="jump">Jump</button>
+        <button type="button" data-action="attack">Attack</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
